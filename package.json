@@ -1,0 +1,37 @@
+{
+  "name": "rabbitmessaging",
+  "version": "0.1.0",
+  "description": "node wrapper to perform various action on rabbitmq",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+    "cover": "istanbul cover --report cobertura --report html _mocha -- -R spec",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "revision": "node -e 'console.log(require(\"./package.json\").version);'"
+  },
+  "author": "Deepak Verma",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:deepaknverma/rabbitmessaging.git"
+  },
+  "dependencies": {
+    "amqplib": "0.4.2",
+    "ip": "1.1.4",
+    "clone": "2.0.0",
+    "errs": "0.3.2",
+    "node-uuid": "1.4.7",
+    "when": "3.7.7",
+    "extend": "3.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "eslint": "3.13.1",
+    "istanbul": "0.4.5",
+    "mocha": "3.2.0",
+    "moment": "2.15.1",
+    "nock": "8.1.0",
+    "should": "11.1.2"
+  }
+}

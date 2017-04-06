@@ -1,0 +1,12 @@
+test/
+node_modules/
+coverage/
+samples/
+env.json
+.editorconfig
+.eslintignore
+.eslintrc
+.nsprc
+CHANGELOG
+sftp-config.json
+.DS_Store
