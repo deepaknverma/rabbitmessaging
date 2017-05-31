@@ -10,3 +10,4 @@ services:
 install:
     - sudo rabbitmq-plugins enable rabbitmq_management
     - sudo service rabbitmq-server restart
+    - npm install
