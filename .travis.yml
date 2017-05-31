@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '6.0'
+addons:
+  hosts:
+    - rabbit
+    - hare
+services:
+  - rabbitmq
+install:
+    - sudo rabbitmq-plugins enable rabbitmq_management
+    - sudo service rabbitmq-server restart
+before_script:
+    - sudo RABBITMQ_NODE_PORT=5672 RABBITMQ_SERVER_START_ARGS="-rabbitmq_management listener [{port,15672}]" RABBITMQ_NODENAME=hare rabbitmq-server -detached

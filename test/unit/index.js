@@ -2,7 +2,7 @@
  * @Author: Deepak Verma
  * @Date:   2015-09-23 09:30:12
  * @Last Modified by:   dverma
- * @Last Modified time: 2017-04-06 11:58:29
+ * @Last Modified time: 2017-05-31 14:56:27
  */
 
 'use strict';
@@ -14,7 +14,6 @@ let bus, busStatus;
 
 function listen() {
 	function reply(msg, done) {
-		// console.log(msg);
 		if (done) {
 			if (msg.payload === 'Success') {
 				return done(null, msg);
@@ -29,7 +28,7 @@ function listen() {
 		routing: 'direct'
 	}, reply)
 		.catch(function(err) {
-			// console.log(err);
+			console.err(err);
 		});
 
 }
