@@ -2,7 +2,7 @@
  * @Author: Deepak Verma
  * @Date:   2015-09-23 09:30:12
  * @Last Modified by:   dverma
- * @Last Modified time: 2017-05-31 14:56:27
+ * @Last Modified time: 2017-05-31 18:18:17
  */
 
 'use strict';
@@ -120,26 +120,6 @@ describe('Message Bus', function() {
 				should.not.exist(err);
 				done();
 			});
-	});
-
-	it('should subscribe msg based on routing key', function(done) {
-		this.timeout(3000);
-
-		function execute(message) {
-			// console.log(message);
-			should.exist(message);
-			should.equal(message, 'testSubscribeFunction', 'testSubscribeFunction');
-			done();
-		};
-
-		bus.subscribe('desi', {
-			exchange: 'RABBIT',
-			routing: 'direct',
-			targetCounter: 4
-		}, execute);
-		setTimeout(function() {
-			publish();
-		}, 100);
 	});
 
 	it('should make an rpc call using publish to queue method', function(done) {
