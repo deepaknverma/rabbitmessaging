@@ -8,6 +8,6 @@ addons:
 services:
   - rabbitmq
 install:
+    - npm install
     - sudo rabbitmq-plugins enable rabbitmq_management
     - sudo service rabbitmq-server restart
-    - npm install
